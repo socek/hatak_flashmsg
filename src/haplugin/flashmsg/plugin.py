@@ -10,11 +10,11 @@ from .models import FlashMessage
 
 class FlashMessagePlugin(Plugin):
 
-    def add_controller_plugins(self, plugins):
-        plugins.append(FlashMessageControllerPlugin)
+    def add_controller_plugins(self,):
+        self.add_controller_plugin(FlashMessageControllerPlugin)
 
-    def add_unpackers(self, unpacker):
-        unpacker.add('add_flashmsg', lambda req: req.add_flashmsg)
+    def add_unpackers(self):
+        self.unpacker.add('add_flashmsg', lambda req: req.add_flashmsg)
 
     def add_request_plugins(self):
         self.add_request_plugin(AddFlashmsgRequestPlugin)

@@ -2,7 +2,7 @@
 from setuptools import setup, find_packages
 
 install_requires = [
-    'hatak>=0.2',
+    'hatak>=0.2.1',
     'Hatak_Jinja2',
     'Hatak_Beaker',
 ]
@@ -10,7 +10,7 @@ install_requires = [
 if __name__ == '__main__':
     setup(
         name='Hatak_Flashmsg',
-        version='0.1',
+        version='0.1.1',
         description='Flash Messages plugin for Hatak.',
         license='Apache License 2.0',
         packages=find_packages('src'),
